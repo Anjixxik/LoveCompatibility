@@ -15,8 +15,8 @@ function loveScore(name1, name2) {
     if (name1.trim().toLowerCase() === "martin" || name2.trim().toLowerCase() === "martin") {
         const other = name1 === "martin" ? name2 : name1;
         if (special.includes(other)) {
-            return 100;
             EE.innerText = `Martinova jediná pravá láska je linux ❤️🐧`;
+            return 100;
         }
         return 0;
     }
@@ -40,5 +40,6 @@ button.addEventListener('click', () => {
   const score = loveScore(name1, name2);
   result.innerText = `Kompatibilita: ${score}% ❤️`;
 });
+
 
 

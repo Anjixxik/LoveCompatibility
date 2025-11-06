@@ -14,7 +14,7 @@ function loveScore(name1, name2) {
       // EasterEgg - If either name is Martin...
     if (name1.trim().toLowerCase() === "martin" || name2.trim().toLowerCase() === "martin") {
         const other = name1 === "martin" ? name2 : name1;
-        if ((special.trim().toLowerCase()).includes(other)) {
+        if (special.includes(other.trim().toLowerCase())) {
             console.log("EE element:", EE);
             EE.innerText = `Martinova jediná pravá láska je linux ❤️🐧`;
             return 100;
@@ -41,6 +41,7 @@ button.addEventListener('click', () => {
   const score = loveScore(name1, name2);
   result.innerText = `Kompatibilita: ${score}% ❤️`;
 });
+
 
 
 

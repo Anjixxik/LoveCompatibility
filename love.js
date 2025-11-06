@@ -1,6 +1,7 @@
 console.log("JS loaded!");
 const button = document.getElementById('vypocet');
 const result = document.querySelector('.result');
+const EE = document.querySelector('.EE');
 
 function loveScore(name1, name2) {
   const special = ["c++", "c", "cpp", "linux", "archlinux", "arch", "linus torvalds", "tux", "gnu", "kernel", "bash",
@@ -38,3 +39,4 @@ button.addEventListener('click', () => {
   const score = loveScore(name1, name2);
   result.innerText = `Kompatibilita: ${score}% ❤️`;
 });
+

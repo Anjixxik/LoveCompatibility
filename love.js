@@ -15,8 +15,6 @@ function loveScore(name1, name2) {
     if (name1.trim().toLowerCase() === "martin" || name2.trim().toLowerCase() === "martin") {
         const other = name1.trim().toLowerCase() === "martin" ? name2 : name1;
         if (special.includes(other.trim().toLowerCase())) {
-            console.log("EE element:", EE);
-            EE.innerText = `Martinova jediná pravá láska je linux ❤️🐧`;
             return 100;
         }
         return 0;
@@ -39,8 +37,14 @@ button.addEventListener('click', () => {
   const name2 = document.getElementById('name2').value;
 
   const score = loveScore(name1, name2);
+  if (name1.trim().toLowerCase() === "martin" || name2.trim().toLowerCase() === "martin") {
+    result.innerText = `Kompatibilita: ${score}% ❤️\n 
+    Martinova jediná pravá láska je linux ❤️🐧`;
+  } else {
   result.innerText = `Kompatibilita: ${score}% ❤️`;
+  }
 });
+
 
 
 
